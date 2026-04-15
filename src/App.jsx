@@ -61,3 +61,13 @@ export default function App(){
         ""
       )
     }
+    <div className="w-full flex justify-between gap-64 items-center">
+      <p className="flex gap-1.5">
+        <span>Tempreture</span>
+        <span>{weatherData.main.temp}</span>
+      </p>
+      <p className="flex gap-1.5">
+        <span>Humidity</span>
+        <span>{weatherData.main.humidity}%</span>
+      </p>
+    </div>
