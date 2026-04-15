@@ -30,3 +30,16 @@ export default function App(){
       setSunsetMinute(sunSetMinute);
       setSunsetSeconnds(sunSetSeconds);
     }
+     getWeather();
+  },[])
+  if(!weatherData){
+    return (
+      <h1 className="text-3xl font-bold text-red-500 text-center">Please wait a minute....</h1>
+    )
+  }
+  return (
+    <>
+    <div className="w-full h-screen flex justify-center items-center">
+      <div className="w-1/2 h-fit flex flex-col items-center p-5 border-2 border-red-700 rounded-md">
+        <h1>{weatherData.name} City</h1>
+      <div></div>
