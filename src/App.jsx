@@ -40,8 +40,8 @@ export default function App(){
   return (
     <>
     <div className="w-full h-screen flex justify-center items-center">
-      <div className="w-1/2 h-fit flex flex-col items-center p-5 border-2 border-red-700 rounded-md">
-        <h1>{weatherData.name} City</h1>
+      <div className="w-1/2 h-fit flex flex-col items-center p-5 border-3 border-red-700 rounded-md">
+        <h1 className="text-3xl text-red-500 font-bold">{weatherData.name} City</h1>
       <div>
       {weatherData.weather[0].main === "Clear" ? (
         <Sun size={42} className="text-yellow-500"/>
@@ -62,21 +62,21 @@ export default function App(){
       )
     }
     <div className="w-full flex justify-between gap-64 items-center">
-      <p className="flex gap-1.5">
+      <p className="flex gap-1.5 text-xl font-bold">
         <span>Tempreture</span>
         <span>{weatherData.main.temp}</span>
       </p>
-      <p className="flex gap-1.5">
+      <p className="flex gap-1.5 text-xl font-bold">
         <span>Humidity</span>
         <span>{weatherData.main.humidity}%</span>
       </p>
     </div>
       <div className="flex w-full justify-between items-center">
-        <p className="flex gap-2">
+        <p className="flex gap-2 text-xl">
           <span>Sunrise</span>
           <span>{hour}:{minute}:{seconds}</span>
         </p>
-        <p className="flex gap-2 items-center">
+        <p className="flex gap-2 items-center text-xl">
           <span>Sunset</span>
           <span>{sunsetHour}:{sunsetMinute}:{sunsetSeconnds}</span>
         </p>
