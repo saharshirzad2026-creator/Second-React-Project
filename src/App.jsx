@@ -71,3 +71,19 @@ export default function App(){
         <span>{weatherData.main.humidity}%</span>
       </p>
     </div>
+         <div className="flex w-full justify-between items-center">
+        <p className="flex gap-2">
+          <span>Sunrise</span>
+          <span>{hour}:{minute}:{seconds}</span>
+        </p>
+        <p className="flex gap-2 items-center">
+          <span>Sunset</span>
+          <span>{sunsetHour}:{sunsetMinute}:{sunsetSeconnds}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  </div>
+    </>
+  )
+}
