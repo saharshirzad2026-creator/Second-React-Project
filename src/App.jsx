@@ -43,3 +43,12 @@ export default function App(){
       <div className="w-1/2 h-fit flex flex-col items-center p-5 border-2 border-red-700 rounded-md">
         <h1>{weatherData.name} City</h1>
       <div></div>
+      {weatherData.weather[0].main === "Clear" ? (
+        <Sun size={42} className="text-yellow-500"/>
+      ) : weatherData.weather[0].main === "Clouds" ? (
+        <Cloud size={42}/>
+      ) : weatherData.weather[0].main === "Thunderstorm" ? (
+        <CloudSun size={42}/>
+      ) : weatherData.weather[0].main === "Drizzle" ? (
+        <CloudDrizzle size={42}/>
+      ) : weatherData.weather[0].main === "Rain" ? (
