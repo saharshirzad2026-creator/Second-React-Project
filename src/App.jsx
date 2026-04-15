@@ -30,7 +30,7 @@ export default function App(){
       setSunsetMinute(sunSetMinute);
       setSunsetSeconnds(sunSetSeconds);
     }
-     getWeather();
+    getWeather();
   },[])
   if(!weatherData){
     return (
@@ -42,7 +42,7 @@ export default function App(){
     <div className="w-full h-screen flex justify-center items-center">
       <div className="w-1/2 h-fit flex flex-col items-center p-5 border-2 border-red-700 rounded-md">
         <h1>{weatherData.name} City</h1>
-      <div></div>
+      <div>
       {weatherData.weather[0].main === "Clear" ? (
         <Sun size={42} className="text-yellow-500"/>
       ) : weatherData.weather[0].main === "Clouds" ? (
@@ -52,7 +52,7 @@ export default function App(){
       ) : weatherData.weather[0].main === "Drizzle" ? (
         <CloudDrizzle size={42}/>
       ) : weatherData.weather[0].main === "Rain" ? (
-           <CloudRain size={42}/>
+        <CloudRain size={42}/>
       ) : weatherData.weather[0].main === "Snow" ? (
         <Snowflake size={42}/>
       ) : weatherData.weather[0].main === "Fog" ? (
@@ -71,7 +71,7 @@ export default function App(){
         <span>{weatherData.main.humidity}%</span>
       </p>
     </div>
-         <div className="flex w-full justify-between items-center">
+      <div className="flex w-full justify-between items-center">
         <p className="flex gap-2">
           <span>Sunrise</span>
           <span>{hour}:{minute}:{seconds}</span>
