@@ -52,3 +52,12 @@ export default function App(){
       ) : weatherData.weather[0].main === "Drizzle" ? (
         <CloudDrizzle size={42}/>
       ) : weatherData.weather[0].main === "Rain" ? (
+           <CloudRain size={42}/>
+      ) : weatherData.weather[0].main === "Snow" ? (
+        <Snowflake size={42}/>
+      ) : weatherData.weather[0].main === "Fog" ? (
+        <CloudFog size={42}/>
+      ) : (
+        ""
+      )
+    }
