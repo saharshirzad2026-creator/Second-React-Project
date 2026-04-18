@@ -59,7 +59,7 @@ export default function App(){
       ) : weatherData.weather[0].main === "Thunderstorm" ? (
         <CloudSun size={42}/>
       ) : weatherData.weather[0].main === "Drizzle" ? (
-        <CloudDrizzle size={42}/>
+        <CloudDrizzle size={42} className="text-center"/>
       ) : weatherData.weather[0].main === "Rain" ? (
         <CloudRain size={42}/>
       ) : weatherData.weather[0].main === "Snow" ? (
