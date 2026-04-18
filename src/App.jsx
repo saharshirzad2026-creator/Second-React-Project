@@ -65,7 +65,7 @@ export default function App(){
       ) : weatherData.weather[0].main === "Snow" ? (
         <Snowflake size={42} className="text-center"/>
       ) : weatherData.weather[0].main === "Fog" ? (
-        <CloudFog size={42}/>
+        <CloudFog size={42} className="text-center"/>
       ) : (
         ""
       )
