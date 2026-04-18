@@ -53,7 +53,7 @@ export default function App(){
         <h1 className="text-3xl text-red-500 font-bold">{weatherData.name} City</h1>
       <div className="my-6">
       {weatherData.weather[0].main === "Clear" ? (
-        <Sun size={42} className="text-yellow-500"/>
+        <Sun size={42} className="text-yellow-500 text-center"/>
       ) : weatherData.weather[0].main === "Clouds" ? (
         <Cloud size={42}/>
       ) : weatherData.weather[0].main === "Thunderstorm" ? (
