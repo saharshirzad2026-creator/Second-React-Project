@@ -53,19 +53,19 @@ export default function App(){
         <h1 className="text-3xl text-red-500 font-bold">{weatherData.name} City</h1>
       <div className="my-6">
       {weatherData.weather[0].main === "Clear" ? (
-        <Sun size={42} className="text-yellow-500 text-center"/>
+        <Sun size={42} className="text-yellow-500 text-center mx-auto"/>
       ) : weatherData.weather[0].main === "Clouds" ? (
-        <Cloud size={42} className="text-center"/>
+        <Cloud size={42} className="text-center mx-auto"/>
       ) : weatherData.weather[0].main === "Thunderstorm" ? (
-        <CloudSun size={42}/>
+        <CloudSun size={42} className="text-center mx-auto"/>
       ) : weatherData.weather[0].main === "Drizzle" ? (
-        <CloudDrizzle size={42} className="text-center"/>
+        <CloudDrizzle size={42} className="text-center mx-auto"/>
       ) : weatherData.weather[0].main === "Rain" ? (
-        <CloudRain size={42} className="text-center"/>
+        <CloudRain size={42} className="text-center mx-auto"/>
       ) : weatherData.weather[0].main === "Snow" ? (
-        <Snowflake size={42} className="text-center"/>
+        <Snowflake size={42} className="text-center mx-auto"/>
       ) : weatherData.weather[0].main === "Fog" ? (
-        <CloudFog size={42} className="text-center"/>
+        <CloudFog size={42} className="text-center mx-auto"/>
       ) : (
         ""
       )
